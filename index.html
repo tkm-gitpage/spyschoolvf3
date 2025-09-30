@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LMCS Puzzle</title>
+<style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        input[type="text"] { padding: 10px; font-size: 16px; }
+        button { padding: 10px 20px; font-size: 16px; margin-left: 10px; }
+        #result { margin-top: 20px; font-size: 20px; color: green; }
+</style>
+</head>
+<body>
+<h2>Enter the 4-letter code to reveal the word</h2>
+<input type="text" id="codeInput" maxlength="4" placeholder="Enter code">
+<button onclick="checkCode()">Submit</button>
+<div id="result"></div>
+ 
+    <script>
+        function checkCode() {
+            var input = document.getElementById("codeInput").value.toUpperCase();
+            var resultDiv = document.getElementById("result");
+            if (input === "LMCS") {
+                resultDiv.textContent = "The Librarians Anti Room";
+            } else {
+                resultDiv.textContent = "Incorrect code. Try again.";
+            }
+        }
+</script>
+</body>
+</html>
